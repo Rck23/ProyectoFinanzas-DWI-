@@ -23,6 +23,10 @@ namespace ProyectoFinanzas_DWI_.Controllers
             return View();
         }
 
+        public IActionResult RecursoNoEncontrado()
+        {
+            return View();
+        }
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
