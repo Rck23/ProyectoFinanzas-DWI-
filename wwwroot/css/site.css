@@ -69,3 +69,22 @@ body {
 .acordeon-cuentas .accordion-collapse {
     font-size: 18px;
 }
+
+
+/* TRANSACCIONES INDEX */
+
+.carousel-item {
+    height: 350px;
+   
+}
+
+    .carousel-item img {
+        object-fit: cover;
+        min-height: 350px;
+    }
+
+@media(max-width:768px) {
+    .carousel .carousel-inner {
+        height:auto;
+    }
+}
