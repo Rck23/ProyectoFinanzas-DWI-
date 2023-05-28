@@ -7,11 +7,10 @@
 
 <div class="container mt-4">
 
+
 <h1>Crear Cuenta</h1>
-<h5>
-    La cuenta se refiere a los distintos balances que tienes:
-    tarjeta de crédito, cuenta de ahorro, préstamo, etc.
-</h5>
+<h5>La cuenta se refiere a los distintos balances que tienes: 
+    tarjeta de crédito, cuenta de ahorro, préstamo, etc.</h5>
 
 <form asp-action="Crear">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -40,11 +39,14 @@
         <span asp-validation-for="Descripcion" class="text-danger"></span>
     </div>
 
-    <button type="submit" class="btn btn-primary">Enviar</button>
+    <button type="submit" class="btn btn-primary">Crear</button>
+    
     <a class="btn btn-secondary" asp-action="Index">Cancelar</a>
 </form>
 
+
 </div>
+
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />

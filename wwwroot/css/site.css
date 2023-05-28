@@ -1,4 +1,15 @@
-﻿/* POR DEFECTO DEL PROYECTO */
+﻿
+:root {
+    /* CSS HEX */
+    --dark-pastel-green: #24b84dff;
+    --mint: #6ea97bff;
+    --gunmetal: #2b3938ff;
+    --cambridge-blue: #a2cab4ff;
+    --baby-powder: #fafcf8ff;
+    --Boton-principal: #00db1d;
+}
+
+/* POR DEFECTO DEL PROYECTO */
 * {
     padding: 0;
     margin: 0;
@@ -87,4 +98,16 @@ body {
     .carousel .carousel-inner {
         height:auto;
     }
+}
+
+
+
+.btnprincipal {
+    background-color: var(--Boton-principal);
+    color: var(--gunmetal);
+}
+
+.bg {
+    background-color: url("https://ieu.edu.mx/wp-content/uploads/2022/06/blog-ieu-Cual-es-el-campo-laboral-en-finanzas-y-administracion-bancaria-1024x576.jpg");
+    background-position: center center;
 }

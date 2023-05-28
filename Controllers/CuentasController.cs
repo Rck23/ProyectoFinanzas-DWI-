@@ -12,15 +12,19 @@ namespace ProyectoFinanzas_DWI_.Controllers
         private readonly IServicioUsuarios servicioUsuarios;
         private readonly IRepositorioCuentas repositorioCuentas;
         private readonly IMapper mapper;
+        private readonly IRepositorioTransacciones repositorioTransacciones;
+        
 
         public CuentasController(IRepositorioTiposCuentas repositorioTiposCuentas,
             IServicioUsuarios servicioUsuarios, IRepositorioCuentas repositorioCuentas,
-            IMapper mapper)
+            IMapper mapper, IRepositorioTransacciones repositorioTransacciones)
         {
             this.repositorioTiposCuentas = repositorioTiposCuentas;
             this.servicioUsuarios = servicioUsuarios;
             this.repositorioCuentas = repositorioCuentas;
             this.mapper = mapper;
+            this.repositorioTransacciones = repositorioTransacciones;
+         
         }
 
         public async Task<IActionResult> Index()
@@ -38,6 +42,7 @@ namespace ProyectoFinanzas_DWI_.Controllers
 
             return View(modelo);
         }
+
 
         [HttpGet]
         public async Task<IActionResult> Crear()
@@ -68,6 +73,7 @@ namespace ProyectoFinanzas_DWI_.Controllers
             await repositorioCuentas.Crear(cuenta);
             return RedirectToAction("Index");
         }
+
         public async Task<IActionResult> Editar(int id)
         {
             var usuarioId = servicioUsuarios.ObtenerUsuarioId();

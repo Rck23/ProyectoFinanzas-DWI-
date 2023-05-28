@@ -1,0 +1,145 @@
+﻿@model RegistroViewModel
+
+@{
+    ViewData["Title"] = "Registro";
+}
+
+<div class="container w-75 bg-success mt-5 rounded shadow">
+    <div class="row align-items-md-stretch">
+
+        <div class="col bg-white p-5 rounded-end">
+            <div class="text-end">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Nissan_logo.png/1200px-Nissan_logo.png" width="48" alt="Logo_UTA" />
+            </div>
+            <h2 class="fw-bold text-center py-5">Bievenido(a)</h2>
+
+            <form asp-action="Registro">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="mb-4 text-center ">
+                    <label asp-for="Nombre" for="nombre">Nombre de usuario</label>
+                    <input asp-for="Nombre" type="text" class="form-control " id="nombre" required>
+
+
+                </div>
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+                <div class="mb-4 text-center ">
+                    <label asp-for="Email" for="email">Correo electrónico</label>
+                    <input asp-for="Email" type="text" class="form-control " id="email" required>
+                </div>
+                <span asp-validation-for="Email" class="text-danger"></span>
+
+                <div class="mb-4 text-center">
+                    <label asp-for="Password" for="password">Contraseña</label>
+                    <input asp-for="Password" type="password" class="form-control " id="password" required>
+                </div>
+                <span asp-validation-for="Password" class="text-danger"></span>
+
+           
+                <div class="mb-4 d-grid">
+                    <button class="btn-primary btn">Regístrate</button>
+                </div>
+                <div class="mb-4 d-grid">
+                    <span>Ya tienes una cuenta? <a asp-action="Login">Inicia sesíon</a></span>
+
+                </div>
+            </form>
+
+            <div class="container w-100 my-5">
+                <div cite="row mb-4">
+                    <div class="col-12 text-center">O</div>
+                    <div class="col-12 text-center">Inicia sesión</div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <button class="btn btn-outline-primary w-100 my-1">
+                            <div class="row align-items-center">
+                                <div class="col-2 d-none d-md-block">
+                                    <img src="https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-0.png" width="32" alt="Fb" />
+                                </div>
+                                <div class="col-12 col-md-10 text-center">
+                                    Facebook
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-danger w-100 my-1">
+                            <div class="row align-items-center">
+                                <div class="col-2 d-none d-md-block">
+                                    <img src="https://assets.stickpng.com/images/5847f9cbcef1014c0b5e48c8.png" width="32" alt="Google" />
+                                </div>
+                                <div class="col-12 col-md-10 text-center">
+                                    Google
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded">
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+@*
+<form asp-action="Registro">
+    <div class="wrapper">
+        <div class=" main">
+            <div class="row">
+                <div class="col-md-6 side-image">
+                    <div class="text">
+                        <p>Manejo de Presupuesto</p>
+                        <i>En está aplicación podrás manejar tus finanzas</i>
+                    </div>
+                </div>
+                <div class="col-md-6 right">
+                    <div class="input-box">
+                        <header>Regístrate</header>
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <div class="input-field ">
+                            <input asp-for="Nombre" type="text" class="input " id="nombre" required>
+                            <label asp-for="Nombre" for="nombre">Nombre de usuario</label>
+                            <span asp-validation-for="Nombre" class="text-danger"></span>
+
+                        </div>
+                        <div class="input-field ">
+                            <input asp-for="Email" type="text" class="input " id="email" required>
+                            <label asp-for="Email" for="email">Correo electrónico</label>
+                            <span asp-validation-for="Email" class="text-danger"></span>
+
+                        </div>
+                        <div class="input-field ">
+                            <input asp-for="Password" type="password" class="input " id="password" required>
+                            <label asp-for="Password" for="password">Contraseña</label>
+                            <span asp-validation-for="Password" class="text-danger"></span>
+
+                        </div>
+
+                        <div class="input-field mt-2">
+                            <button class="btn-primary btn">Regístrate</button>
+                        </div>
+                        <div class="signin">
+                            <span>Ya tienes una cuenta? <a asp-action="Login">Inicia sesíon</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+*@}

@@ -1,6 +1,6 @@
 ﻿using Dapper;
 using ProyectoFinanzas_DWI_.Models;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace ProyectoFinanzas_DWI_.Services
 {
@@ -13,7 +13,7 @@ namespace ProyectoFinanzas_DWI_.Services
         Task<Cuenta> ObtenerPorId(int id, int usuarioId);
     }
 
-    public class RepositorioCuentas: IRepositorioCuentas
+    public class RepositorioCuentas : IRepositorioCuentas
     {
         private readonly string connectionString;
 
@@ -49,7 +49,6 @@ namespace ProyectoFinanzas_DWI_.Services
         public async Task<Cuenta> ObtenerPorId(int id, int usuarioId)
         {
             using var connection = new SqlConnection(connectionString);
-           
             return await connection.QueryFirstOrDefaultAsync<Cuenta>(
                 @"SELECT Cuentas.Id, Cuentas.Nombre, Balance, Descripcion, TipoCuentaId
                 FROM Cuentas

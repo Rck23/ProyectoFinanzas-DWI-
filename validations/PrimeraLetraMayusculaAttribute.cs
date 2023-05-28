@@ -16,6 +16,7 @@ namespace ProyectoFinanzas_DWI_.validations
             if (primeraLetra != primeraLetra.ToUpper())
             {
                 return new ValidationResult("La primera letra debe ser mayúscula");
+
             }
 
             return ValidationResult.Success;

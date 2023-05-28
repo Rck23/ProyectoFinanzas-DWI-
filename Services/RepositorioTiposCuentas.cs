@@ -1,6 +1,6 @@
 ﻿using Dapper;
 using ProyectoFinanzas_DWI_.Models;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace ProyectoFinanzas_DWI_.Services
 {
